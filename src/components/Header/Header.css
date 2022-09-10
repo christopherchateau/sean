@@ -1,0 +1,14 @@
+.Header {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.85);
+	display: flex;
+	justify-content: center;
+	height: 64px;
+	padding: 10px 0;
+}
+
+.buttons {
+	display: flex;
+	justify-content: flex-end;
+    width: 80%;
+}
