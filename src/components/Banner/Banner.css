@@ -1,0 +1,130 @@
+.Banner {
+	line-height: 1.9em;
+	padding: 70px 15%;
+
+	font-family: 'Mulish', Helvetica, Arial, Lucida, sans-serif;
+	font-size: 16px;
+}
+
+.banner-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.banner-headline {
+	min-width: 400px;
+}
+
+.banner-headline > h1 {
+	font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+	font-weight: 600;
+	font-size: 38px;
+	color: #162d49;
+	line-height: 1.3em;
+	text-align: left;
+	margin-right: 80px;
+    margin-bottom: 10px;
+}
+
+.banner-headline-title > h2 {
+	font-family: 'Mulish', Helvetica, Arial, Lucida, sans-serif;
+	font-weight: 700;
+	font-size: 17px;
+	color: #6b0020;
+	text-align: left;
+    margin-bottom: 10px;
+}
+
+.banner-areas-of-practice {
+	background: #6b0020;
+	color: white;
+}
+
+.banner-areas-of-practice > .banner-content {
+	padding: 28px 0;
+}
+
+.banner-areas-of-practice > .banner-content > .banner-headline {
+	margin-right: 45px;
+}
+
+.banner-areas-of-practice > .banner-content > .banner-headline > h1 {
+	color: white;
+}
+
+.banner-bio > .banner-content {
+	flex-direction: column;
+}
+
+.banner-bio > .banner-content > .banner-headline {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-bottom: 40px;
+}
+
+.banner-bio > .banner-content > .banner-headline > h1 {
+	margin: 0 0 15px;
+	font-size: 44px;
+}
+
+.banner-bio > .banner-content > .bullet-points > h6{
+	font-family: 'Mulish',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 500;
+    font-size: 21px;
+    color: #6b0020;
+    line-height: 1.3em;
+}
+
+.divider {
+    border-top: 3px solid #6b0020;
+    width: 100px;
+}
+
+.banner-areas-of-practice > .banner-content > .banner-headline > .divider {
+    border-top: 3px solid rgba(255,255,255,0.35);
+}
+
+.text {
+	text-align: justify;
+	margin: 0;
+
+	font-family: Open Sans,Arial,sans-serif;
+    color: #666;
+}
+
+.text-image {
+	height: 45%;
+	width: 45%;
+	float: left;
+	margin-right: 15px;
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.checkbox {
+	display: flex;
+	align-items: center;
+    background-color: rgba(255,255,255,0.15);
+    max-height: 62px;
+    width: 240px;
+    margin-bottom: 20px;
+    padding: 15px 15px;
+}
+
+.checkbox > h5 {
+    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+    font-size: 18px;
+}
+
+.checkbox > img {
+	height: 32px;
+	width: 32px;
+	margin-right: 15px;
+}

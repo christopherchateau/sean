@@ -1,7 +1,7 @@
 import Button from '../Button'
 import './Header.css'
 
-function Header() {
+const Header = () => {
 	const labels = ['ABOUT', 'PRACTICE AREAS', 'BIO', 'CONTACT']
 
 	return (
