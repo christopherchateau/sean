@@ -1,5 +1,9 @@
 import './Button.css'
 
-const Button = ({ label }) => <div className='Button'>{label}</div>
+const Button = ({ label, executeScroll, refs, index }) => (
+	<div className='Button' onClick={() => executeScroll(refs[index])}>
+		{label}
+	</div>
+)
 
 export default Button

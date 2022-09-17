@@ -24,7 +24,7 @@
 	line-height: 1.3em;
 	text-align: left;
 	margin-right: 80px;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .banner-headline-title > h2 {
@@ -33,7 +33,7 @@
 	font-size: 17px;
 	color: #6b0020;
 	text-align: left;
-    margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .banner-areas-of-practice {
@@ -70,29 +70,33 @@
 	font-size: 44px;
 }
 
-.banner-bio > .banner-content > .bullet-points > h6{
-	font-family: 'Mulish',Helvetica,Arial,Lucida,sans-serif;
-    font-weight: 500;
-    font-size: 21px;
-    color: #6b0020;
-    line-height: 1.3em;
+.banner-bio > .banner-content > .bullet-points-wrapper {
+	margin-top: 50px;
+}
+
+.banner-bio > .banner-content > .bullet-points-wrapper > .bullet-points > h6 {
+	font-family: 'Mulish', Helvetica, Arial, Lucida, sans-serif;
+	font-weight: 500;
+	font-size: 21px;
+	color: #6b0020;
+	line-height: 1.3em;
 }
 
 .divider {
-    border-top: 3px solid #6b0020;
-    width: 100px;
+	border-top: 3px solid #6b0020;
+	width: 100px;
 }
 
 .banner-areas-of-practice > .banner-content > .banner-headline > .divider {
-    border-top: 3px solid rgba(255,255,255,0.35);
+	border-top: 3px solid rgba(255, 255, 255, 0.35);
 }
 
 .text {
 	text-align: justify;
 	margin: 0;
 
-	font-family: Open Sans,Arial,sans-serif;
-    color: #666;
+	font-family: Open Sans, Arial, sans-serif;
+	color: #666;
 }
 
 .text-image {
@@ -103,24 +107,24 @@
 }
 
 .checkboxes {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
 }
 
 .checkbox {
 	display: flex;
 	align-items: center;
-    background-color: rgba(255,255,255,0.15);
-    max-height: 62px;
-    width: 240px;
-    margin-bottom: 20px;
-    padding: 15px 15px;
+	background-color: rgba(255, 255, 255, 0.15);
+	max-height: 62px;
+	width: 240px;
+	margin-bottom: 20px;
+	padding: 15px 15px;
 }
 
 .checkbox > h5 {
-    font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 18px;
+	font-family: 'Poppins', Helvetica, Arial, Lucida, sans-serif;
+	font-size: 18px;
 }
 
 .checkbox > img {

@@ -1,61 +1,70 @@
+import { useEffect, useRef } from 'react'
 import Checkbox from '../../assets/checkbox.png'
 import './Banner.css'
 
+const checkboxes = [
+	'Criminal Defense',
+	'Civil Defense',
+	'Wildlife Law',
+	'Family Law',
+]
+
+const bulletpoints = [
+	{
+		headline:
+			'Continuing Education, Teaching Positions, Selected Speeches & Articles',
+		points: [
+			'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
+			'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
+			'LACDL CLE on Sex Assault Defense 2019',
+			'Guest Lecturer at University of Denver Sturm College of Law',
+			'Moot Court Judge at both CU and DU',
+		],
+	},
+	{
+		headline: 'Practice Areas',
+		points: [
+			'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
+			'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
+			'LACDL CLE on Sex Assault Defense 2019',
+			'Guest Lecturer at University of Denver Sturm College of Law',
+			'Moot Court Judge at both CU and DU',
+		],
+	},
+	{
+		headline: 'Education',
+		points: [
+			'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
+			'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
+			'LACDL CLE on Sex Assault Defense 2019',
+		],
+	},
+	{
+		headline: 'Memberships',
+		points: [
+			'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
+			'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
+			'LACDL CLE on Sex Assault Defense 2019',
+		],
+	},
+]
+
 const Banner = ({
 	name = '',
-	headline = '',
-	subHeadline = '',
 	text = '',
+	addRef = null,
+	headline = '',
 	textImage = null,
+	subHeadline = '',
 }) => {
-	const checkboxes = [
-		'Criminal Defense',
-		'Civil Defense',
-		'Wildlife Law',
-		'Family Law',
-	]
+	const ref = useRef(null)
 
-	const bulletpoints = [
-		{
-			headline: 'Continuing Education, Teaching Positions, Selected Speeches & Articles',
-			points: [
-				'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
-				'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
-				'LACDL CLE on Sex Assault Defense 2019',
-				'Guest Lecturer at University of Denver Sturm College of Law',
-				'Moot Court Judge at both CU and DU'
-			],
-		},
-		{
-			headline: 'Practice Areas',
-			points: [
-				'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
-				'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
-				'LACDL CLE on Sex Assault Defense 2019',
-				'Guest Lecturer at University of Denver Sturm College of Law',
-				'Moot Court Judge at both CU and DU'
-			],
-		},
-		{
-			headline: 'Education',
-			points: [
-				'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
-				'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
-				'LACDL CLE on Sex Assault Defense 2019',
-			],
-		},
-		{
-			headline: 'Memberships',
-			points: [
-				'Sexual Assault Defense in the Era of “Me Too” National Trial Lawyers Conference, 2021',
-				'Experts, Mitigation and Motions Practice for Sexual Assault Defense Alternate Defense Counsel CLE instructor 2021',
-				'LACDL CLE on Sex Assault Defense 2019',
-			],
-		},
-	];
+	useEffect(() => {
+		addRef(ref)
+	}, [])
 
 	return (
-		<div className={`Banner banner-${name}`}>
+		<div className={`Banner banner-${name}`} ref={ref}>
 			<div className='banner-content'>
 				{headline && (
 					<div className='banner-headline'>
@@ -80,20 +89,20 @@ const Banner = ({
 					</div>
 				)}
 
-				{name === 'bio' &&
-						<div className='bullet-points'>
-							{bulletpoints.map(bp =>
-								<h6>{bp.headline}</h6>
-							)}
-							{/* <h6>{'Continuing Education, Teaching Positions, Selected Speeches & Articles'}</h6>
-							<ul>
-								<li>asdf</li>
-								<li>asd</li>
-								<li>asdfasdf</li>
-							</ul> */}
-						</div>
-				}
-	
+				{name === 'bio' && (
+					<div className='bullet-points-wrapper'>
+						{bulletpoints.map(bp => {
+							const points = bp.points.map(p => <li>{p}</li>)
+							return (
+								<div className='bullet-points'>
+									<h6>{bp.headline}</h6>
+									<ul>{points}</ul>
+								</div>
+							)
+						})}
+					</div>
+				)}
+
 				{name === 'areas-of-practice' && (
 					<div className='checkboxes'>
 						{checkboxes.map(cb => (
