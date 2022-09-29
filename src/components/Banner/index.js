@@ -1,4 +1,5 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
+import ContactForm from './ContactForm'
 import Checkbox from '../../assets/checkbox.png'
 import './Banner.css'
 
@@ -51,21 +52,37 @@ const bulletpoints = [
 
 const Banner = ({
 	name = '',
-	text = '',
+	text = [],
 	addRef = null,
 	headline = '',
 	textImage = null,
 	subHeadline = '',
 }) => {
+	const [hidden, setHidden] = useState(true)
+
 	const ref = useRef(null)
+
+	const onScroll = () => {
+		if (
+			ref.current.getBoundingClientRect().top - window.innerHeight < - 200
+		) {
+			setHidden(false)
+			window.removeEventListener('scroll', onScroll)
+		}
+	}
 
 	useEffect(() => {
 		addRef(ref)
+
+		window.addEventListener('scroll', onScroll, { passive: true })
+
+		return () => window.removeEventListener('scroll', onScroll)
 	}, [])
 
 	return (
 		<div className={`Banner banner-${name}`} ref={ref}>
-			<div className='banner-content'>
+			<div className={`banner-content ${hidden ? 'hidden' : 'show'}`}>
+
 				{headline && (
 					<div className='banner-headline'>
 						{name === 'about' && (
@@ -85,16 +102,23 @@ const Banner = ({
 						{textImage && (
 							<img className='text-image' src={textImage} />
 						)}
-						<p className='text'>{text}</p>
+						{text.map(t => (
+							<div key={t}>
+								<p className='text'>{t}</p>
+								<br />
+							</div>
+						))}
 					</div>
 				)}
 
 				{name === 'bio' && (
 					<div className='bullet-points-wrapper'>
-						{bulletpoints.map(bp => {
-							const points = bp.points.map(p => <li>{p}</li>)
+						{bulletpoints.map((bp, i) => {
+							const points = bp.points.map(p => (
+								<li key={p}>{p}</li>
+							))
 							return (
-								<div className='bullet-points'>
+								<div className='bullet-points' key={i}>
 									<h6>{bp.headline}</h6>
 									<ul>{points}</ul>
 								</div>
@@ -106,13 +130,16 @@ const Banner = ({
 				{name === 'areas-of-practice' && (
 					<div className='checkboxes'>
 						{checkboxes.map(cb => (
-							<div className='checkbox'>
+							<div className='checkbox' key={cb}>
 								<img src={Checkbox} />
 								<h5>{cb}</h5>
 							</div>
 						))}
 					</div>
 				)}
+
+				{name === 'contact' && <ContactForm />}
+
 			</div>
 		</div>
 	)

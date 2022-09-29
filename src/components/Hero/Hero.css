@@ -1,6 +1,6 @@
 .Hero {
 	background-image: url('../../assets/closeup.png');
-	background-position: top-left;
+	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;
 
@@ -60,3 +60,5 @@ h4 {
 	font-size: 16px;
 	font-weight: 600;
 }
+
+@media screen and (max-width: 820px) {}

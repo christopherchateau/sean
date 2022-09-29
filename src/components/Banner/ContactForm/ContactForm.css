@@ -1,0 +1,57 @@
+.ContactForm {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+input,
+textarea,
+button {
+	background-color: #eee;
+	border-radius: 0;
+	border: 1px solid #eee;
+	color: #999;
+	font-size: 14px;
+	padding: 16px;
+	margin: 10px 0;
+	font-family: 'Mulish', Helvetica, Arial, Lucida, sans-serif;
+}
+
+button {
+	color: #6b0020;
+	border-color: #6b0020;
+	border-radius: 5px;
+	font-size: 16px;
+	width: 75px;
+	position: absoluute;
+	right: 0;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #6b0020;
+	color: #eee;
+	transition: ease-in-out .1s;
+}
+
+.ContactForm > .errors {
+}
+
+.ContactForm > .top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.ContactForm > .top > input {
+	width: calc(47% - 10px);
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.input-error {
+	border: 1px solid #e00043;
+}
