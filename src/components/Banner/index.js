@@ -64,7 +64,8 @@ const Banner = ({
 
 	const onScroll = () => {
 		if (
-			ref.current.getBoundingClientRect().top - window.innerHeight < - 200
+			ref.current.getBoundingClientRect().top - window.innerHeight <
+			-200
 		) {
 			setHidden(false)
 			window.removeEventListener('scroll', onScroll)
@@ -82,7 +83,6 @@ const Banner = ({
 	return (
 		<div className={`Banner banner-${name}`} ref={ref}>
 			<div className={`banner-content ${hidden ? 'hidden' : 'show'}`}>
-
 				{headline && (
 					<div className='banner-headline'>
 						{name === 'about' && (
@@ -138,8 +138,7 @@ const Banner = ({
 					</div>
 				)}
 
-				{name === 'contact' && <ContactForm />}
-
+				{/* {name === 'contact' && <ContactForm />} */}
 			</div>
 		</div>
 	)

@@ -30,9 +30,7 @@
 }
 
 .hero-text {
-	margin-left: 100px;
-	margin-top: 200px;
-	width: 600px;
+	margin: 200px 10% 0;
 	z-index: 1;
 }
 
@@ -61,4 +59,18 @@ h4 {
 	font-weight: 600;
 }
 
-@media screen and (max-width: 820px) {}
+@media screen and (max-width: 1000px) {
+	.Hero {
+		justify-content: flex-end;
+	}
+
+	.hero-text {
+		padding-bottom: 40px;
+	}
+}
+
+@media screen and (max-width: 770px) {
+	h2 {
+		font-size: 34px;
+	}
+}
