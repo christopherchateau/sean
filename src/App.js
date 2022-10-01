@@ -18,7 +18,7 @@ const banners = [
 		name: 'areas-of-practice',
 		headline: 'Areas of Practice',
 		subHeadline:
-			'Julia has the experience to handle any case, but is renowned and specialized in these areas of law:',
+			'Sean esq gets the frickin job done no questions asked',
 	},
 	{
 		name: 'bio',

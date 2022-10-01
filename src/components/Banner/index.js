@@ -4,10 +4,10 @@ import Checkbox from '../../assets/checkbox.png'
 import './Banner.css'
 
 const checkboxes = [
-	'Criminal Defense',
-	'Civil Defense',
-	'Wildlife Law',
-	'Family Law',
+	'Malt Liquor',
+	'Hating Hanson',
+	'Fancy Beer',
+	'Bird Law',
 ]
 
 const bulletpoints = [
