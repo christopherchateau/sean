@@ -7,14 +7,14 @@
 	padding: 10px 0;
 }
 
-.buttons {
+.header-buttons {
 	display: flex;
 	justify-content: flex-end;
 	width: 80%;
 }
 
 @media screen and (max-width: 500px) {
-	.buttons {
+	.header-buttons {
 		justify-content: space-evenly;
 	}
 }

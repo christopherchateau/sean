@@ -64,8 +64,7 @@ const Banner = ({
 
 	const onScroll = () => {
 		if (
-			ref.current.getBoundingClientRect().top - window.innerHeight <
-			-200
+			ref.current.getBoundingClientRect().top - window.innerHeight < -200
 		) {
 			setHidden(false)
 			window.removeEventListener('scroll', onScroll)

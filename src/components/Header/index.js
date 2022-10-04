@@ -6,7 +6,7 @@ const Header = ({ executeScroll, refs }) => {
 
 	return (
 		<div className='Header'>
-			<div className='buttons'>
+			<div className='header-buttons'>
 				{labels.map((label, i) => (
 					<Button
 						{...{ label, executeScroll, refs, index: i, key: i }}

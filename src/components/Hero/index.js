@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import CloseUpImg from '../../assets/closeup.png';
+import CloseUpImg from '../../assets/closeup.png'
 import './Hero.css'
 
 const Hero = () => {
@@ -10,11 +10,9 @@ const Hero = () => {
 
 		img.src = CloseUpImg
 		img.onload = () => setImgLoaded(true)
-
 	}, [CloseUpImg])
 
-	return (
-		<div className='Hero' style={{ backgroundImage: `url(${CloseUpImg})` }}>
+	return <div className={`Hero ${!imgLoaded ? 'loading-overlay': 'b' }`} style={{ backgroundImage: `url(${CloseUpImg})` }}>
 			<div className='hero-overlay' />
 			<div className='hero-text'>
 				<h4>I hate the band Hanson</h4>
@@ -22,7 +20,6 @@ const Hero = () => {
 				<h3>Their hair sucks most of all it pisses me off</h3>
 			</div>
 		</div>
-	)
 }
 
 export default Hero
