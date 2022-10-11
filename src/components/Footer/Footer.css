@@ -1,0 +1,14 @@
+.Footer {
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.85);
+	display: flex;
+	justify-content: center;
+    padding: 14px;
+}
+
+.Footer > h4 {
+    margin: 0;
+    font-weight: 200;
+    line-height: 2;
+    text-align: center;
+}
