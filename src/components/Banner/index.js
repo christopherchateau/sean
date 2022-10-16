@@ -64,7 +64,25 @@ const Banner = ({
 		) {
 			setHidden(false)
 			window.removeEventListener('scroll', onScroll)
+
+			if (name === 'areas-of-practice') {
+				fadeCheckboxes()
+			}
 		}
+	}
+
+	const fadeCheckboxes = () => {
+		let i = 0
+
+		const checkboxTimer = setInterval(() => {
+			document
+				.getElementsByClassName(`checkbox-${i}`)[0]
+				.classList.add('show')
+
+			if (i === 3) clearInterval(checkboxTimer)
+
+			i++
+		}, 750)
 	}
 
 	useEffect(() => {
@@ -126,8 +144,8 @@ const Banner = ({
 
 				{name === 'areas-of-practice' && (
 					<div className='checkboxes'>
-						{checkboxes.map(cb => (
-							<div className='checkbox' key={cb}>
+						{checkboxes.map((cb, i) => (
+							<div className={`checkbox checkbox-${i}`} key={cb}>
 								<img src={Checkbox} />
 								<h5>{cb}</h5>
 							</div>

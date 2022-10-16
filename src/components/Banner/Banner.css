@@ -132,6 +132,7 @@
 	max-height: 62px;
 	width: 240px;
 	margin: 0px 5px 20px;
+	opacity: 0;
 	padding: 15px 15px;
 }
 
@@ -151,7 +152,8 @@
 }
 
 .show {
-	transition: ease-in-out 0.5s;
+	opacity: 1;
+	transition: ease-in-out 0.75s;
 }
 
 @media screen and (max-width: 850px) {
