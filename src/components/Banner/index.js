@@ -3,12 +3,7 @@ import ContactForm from './ContactForm'
 import Checkbox from '../../assets/checkbox.png'
 import './Banner.css'
 
-const checkboxes = [
-	'Malt Liquor',
-	'Hating Hanson',
-	'Fancy Beer',
-	'Bird Law',
-]
+const checkboxes = ['Fancy Beer', 'Hating Hanson', 'Bird Law', 'Malt Liquor']
 
 const bulletpoints = [
 	{
@@ -64,7 +59,8 @@ const Banner = ({
 
 	const onScroll = () => {
 		if (
-			ref.current.getBoundingClientRect().top - window.innerHeight < -200
+			ref.current.getBoundingClientRect().top - window.innerHeight <
+			-200
 		) {
 			setHidden(false)
 			window.removeEventListener('scroll', onScroll)
@@ -84,9 +80,11 @@ const Banner = ({
 			<div className={`banner-content ${hidden ? 'hidden' : 'show'}`}>
 				{headline && (
 					<div className='banner-headline'>
-						{name === 'about' && (
+						{(name === 'about' || name === 'call-sean') && (
 							<div className='banner-headline-title'>
-								<h2>ABOUT</h2>
+								<h2>
+									{name.toUpperCase().replace(/\-/g, ' ')}
+								</h2>
 							</div>
 						)}
 

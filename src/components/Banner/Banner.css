@@ -1,7 +1,6 @@
 .Banner {
 	line-height: 1.9em;
 	padding: 70px 10%;
-
 	font-family: 'Mulish', Helvetica, Arial, Lucida, sans-serif;
 	font-size: 16px;
 }
@@ -85,6 +84,17 @@
 	line-height: 1.3em;
 }
 
+.banner-call-sean > .banner-content > .banner-headline {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.banner-call-sean > .banner-content > .banner-headline > h1 {
+	margin-right: 0;
+	margin-bottom: 30px;
+}
+
 .divider {
 	border-top: 3px solid #6b0020;
 	width: 100px;
@@ -141,13 +151,17 @@
 }
 
 .show {
-	transition: ease-in-out .5s;
+	transition: ease-in-out 0.5s;
 }
 
 @media screen and (max-width: 850px) {
 	.banner-content {
 		flex-direction: column;
 		align-items: flex-start;
+	}
+
+	.banner-call-sean > .banner-content {
+		flex-direction: row;
 	}
 
 	.banner-bio > .banner-content {
@@ -164,12 +178,12 @@
 		min-width: 0;
 	}
 
-	.banner-headline > h1 {
-		/* margin-right: 20px; */
-	}
-
 	.banner-areas-of-practice > .banner-content > .banner-headline {
 		margin-right: 0;
+	}
+
+	.banner-call-sean > .banner-content > .banner-headline {
+		margin-bottom: 0;
 	}
 }
 
